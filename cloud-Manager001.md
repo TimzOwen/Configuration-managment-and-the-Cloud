@@ -131,6 +131,7 @@ Multiple classes
     }
 
 Multiple class 2 syntax
+
     class AutoConfig {
         package { 'Executable':
             ensure => latest,
