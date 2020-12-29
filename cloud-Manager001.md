@@ -152,4 +152,81 @@ Multiple class 2 syntax
 [Deploy configuration across windows](https://puppet.com/blog/deploy-packages-across-your-windows-estate-with-bolt-and-chocolatey/)
 
 
+### Building Blocks of Configuration Management
+
+#### Domain-Specific Languages
+
+DSL=>A programming Language more limited in scope
+
+Puppet:
+
+    Variable
+
+    Functions
+
+    conditional statements
+
+puppet Facts:
+
+    variables that represent the characteristic of the system
+
+Factor puppet:
+
+    Analyzes the current system and store the info gathered
+
+Built in facts:
+
+    if $facts['is_virtual']{
+        package{ 'smartools':
+            ensure=>purged,
+        }
+    }
+    else{
+        package{ 'smartools':
+            ensure=>installed
+        }
+    }
+
+#### Driving principles of configuration management
+
+Idempotent procedures:
+
+    performing actions over and over without changing the system after the first time the action was performed,and with not unintended side effects
+
+Puppet File check to create/not depending on existence
+
+    file { '/etc/issue':
+        mode => '0664'
+        content => "internal system \l\n"
+    }
+
+exec resource:
+
+    runs commands for us
+
+    use 'onlif'-->to avoid crash when running programs with errors
+
+    exec {'move example file':
+        command => 'mv /home/user/example.txt  /home/user/Desktop' ,
+        onlyif => 'test -e /home/user/example.txt'
+    }
+
+Test and repair:
+
+    only actions to be taken if a goal is to be achieved
+
+Puppet stateless:
+
+    Each puppet run independent of the previous command
+
+
+[Domain specific Language](https://en.wikipedia.org/wiki/Domain-specific_language)
+
+[Understanding Puppet design](http://radar.oreilly.com/2015/04/the-puppet-design-philosophy.html)
+
+
+
+
+
+
 
