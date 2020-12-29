@@ -89,4 +89,66 @@ Puppet Resources
 
     Resources are the basic unit for modelling configuration that we want to manage
 
+puppet code structure
+
+    class sudo{
+        package{ 'sudo':
+        ensure=>present,
+        }
+    }
+
+    class sysctl{
+        # make sure the directory exists,some directories don't have it
+        file{ '/etc/sysctl.d':
+        ensure =>directory,
+        }
+    }
+
+    class timezone{
+        file{ '/etc/timezone':
+         ensure => file,
+         content => "UTC\n"
+         replace => true
+        }
+    }
+
+#### Puppet classes
+
+Multiple classes
+
+    class ntp{
+        package{ 'ntp':
+        ensure=>latest
+        }
+        file{ '/etc/ntp.conf':
+            source=>'puppet:///modules/ntp/ntp.conf'
+            replace=>true
+        }
+        service{ 'ntp':
+            enable=>true
+            ensure=>running
+        }
+    }
+
+Multiple class 2 syntax
+    class AutoConfig {
+        package { 'Executable':
+            ensure => latest,
+            }
+        file { 'executable.cfg':
+            source => 'puppet:///modules/executable/Autoconfig/executable.cfg'
+            replace => true,
+            }
+        service { 'executable.exe':
+            enable  => true,
+            ensure  => running,
+            }
+        }
+
+
+[Checkout the latest Puppet and syntax](https://puppet.com/docs/puppet/latest/lang_resources.html)
+
+[Deploy configuration across windows](https://puppet.com/blog/deploy-packages-across-your-windows-estate-with-bolt-and-chocolatey/)
+
+
 
