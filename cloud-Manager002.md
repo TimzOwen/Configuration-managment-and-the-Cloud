@@ -25,3 +25,41 @@ Catalog --> List of rules that are generated for once specific computer once the
 #### Managing Resources in Relationships
 
 
+Resource start with First later in Capital for reference from other resources
+
+    class ntp{
+        package { 'ntp':
+            ensure=>latest,
+        }
+        file { '/etc/ntp.conf ':
+            source => '/home/user/ntp.conf'
+            replace => true
+            require=> Package['ntp'],               # is capitilized
+            notify=>Service['ntp],
+            }
+        service{ 'ntp'
+            enable=> true,
+            ensure=>running,
+            require => File['/home/user/ntp.conf'],            # Also first later capitalized
+        }
+    }
+    include ntp
+
+#### Organizing your puppet module
+
+Module--> Collection of manifest and associated data
+
+start with 'init.pp'
+
+tree modules/      ---------> checking tree module branching
+
+include :: apache  ----> used to make sure init.pp is included
+
+metadata.json --->contain additional data about module
+
+lib --> holds new module developed and shared by others
+
+[Puppet guide](https://puppet.com/docs/puppet/latest/style_guide.html)
+
+[Puppet server package installers](https://puppet.com/docs/puppetserver/latest/install_from_packages.html)
+
