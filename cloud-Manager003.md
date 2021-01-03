@@ -212,3 +212,44 @@ Cloud nodes:
 
 [Terraform on-premise hybrid](https://www.hashicorp.com/resources/terraform-on-premises-hybrid-cloud-wayfair)
 
+
+## Managing Cloud Instances at scale
+
+### Building software for cloud
+
+#### Storing Data in the CLoud
+
+Storage technologies:
+
+    traditional-Block storage
+    
+    new --> blob/object storage
+
+persistent storage:
+
+    used for instances that are long livedand need to keep data across reboots and upgrades
+
+ephemeral storage:
+
+    used for instances that are temporary and only need to keep local data while they are running
+
+data accessed through network:
+
+    NFS
+
+    CIFS
+
+Performance of storage solutions:
+
+    throuhput -> amout of data you can read/write in a given amount of time
+
+    IOPS -(i/o per sec): how many r/w you can do in a second
+
+    latency -> Amount of time it takes to complete r/w operation
+
+hot data->accessed frequently and stored in hot storage
+
+cold data -> accessed infrequently and stored in cold storage
+
+#### Load balancing
+
