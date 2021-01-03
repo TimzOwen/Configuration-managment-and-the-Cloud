@@ -97,3 +97,59 @@ Templating:
 Disk image:
 
     a snapshot of virtual machine's disk at a given point name
+    
+    
+
+#### Creating a New VM using GCP web UI
+
+Used google GCP.
+
+curl wttr.in --> cmd used to check the weather on the command line
+
+#### Customizing VMs in GCP
+
+steps:
+
+    connect to ssh of the VM
+
+    clone the repo you want ot deploy
+
+    run the ./app as sudo
+
+    check the ip before the shh connection
+
+    locate the services and run them as cloud
+
+    check for running services --> (ps as | grep hello)
+
+#### Templating a customized VM
+
+steps:
+
+    stop the VM
+
+    click machine name
+
+    chekc boot disk name
+
+    Then create Image/template 
+
+    Follow the command cand crate from the template
+
+#### Creating from GCP cmd
+
+    gcloud init ---> authenticates google to VM Gcloud
+
+    selecect default project
+
+    select region and zone
+
+    gcloud compute instances create --source-instance-template webserver-template ws1 ws2 ws3 ws4 ws5 
+
+[Compute Linux GCP](https://cloud.google.com/compute/docs/quickstart-linux)
+
+[create VM from instance template](https://cloud.google.com/compute/docs/instances/create-vm-from-instance-template)
+
+[Google sdk docs](https://cloud.google.com/sdk/docs)
+
+
