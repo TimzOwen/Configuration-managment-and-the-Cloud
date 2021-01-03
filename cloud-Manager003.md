@@ -153,3 +153,62 @@ steps:
 [Google sdk docs](https://cloud.google.com/sdk/docs)
 
 
+
+### Automating CLoud Deployments
+
+#### Cloud scale Deployments
+
+Load balancer:
+
+    Ensures that each node receives a balanced number of requests
+
+Round Robin--> Givining each node one request
+
+Varnish & Nginx ---> Cashing technologies used
+
+Database caching:
+
+    Memcached
+
+    Redis
+
+#### Using orchestration
+
+The automated configuration and coordination of complex IT systems and services
+
+CLoud APIs allows you to habdle communication between cloud servers services and applications managed
+
+#### Cloud Infrastructure as Code
+
+Tools to manage services as Code:
+
+    Amazon- Cloud formation
+    Google - Cloud Deployment manager
+    Microsoft - Azure Resource Manager
+    Openstack - Heat Orchestration Templates
+
+Terraform:
+
+    uses domain-specific language to specify what the cloud infrastructure would look like
+
+Cloud nodes:
+
+    Long-lived -->Long lasting
+    short-lived--> can be deleted
+
+[Getting Started with GCP on Terraform](https://cloud.google.com/community/tutorials/getting-started-on-gcp-with-terraform)
+
+[Creating groups of unmanaged instances](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-unmanaged-instances)
+
+[Load balancing requests](https://cloud.google.com/load-balancing/docs/https/)
+
+[Gcp Load balancer](https://geekflare.com/gcp-load-balancer/)
+
+#### Hybrid setup
+
+[Terraform template](https://blog.inkubate.io/create-a-centos-7-terraform-template-for-vmware-vsphere/)
+
+[Terraform enterprise reference](https://www.terraform.io/docs/enterprise/before-installing/reference-architecture/gcp.html)
+
+[Terraform on-premise hybrid](https://www.hashicorp.com/resources/terraform-on-premises-hybrid-cloud-wayfair)
+
