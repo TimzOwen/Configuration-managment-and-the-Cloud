@@ -76,3 +76,24 @@ Clouds:
 
 
 ### Managing instances in the CLoud
+
+
+#### Spinning up VMs in the cloud
+
+Options to choose when selecting VMS:
+
+    Name
+    region & Zone
+    bootdisk
+
+Reference images:
+
+    Store the contents of a machine in a reusable format
+
+Templating:
+
+    The process of capturing all of the system configuration to let us create VMs in a repeatable way
+
+Disk image:
+
+    a snapshot of virtual machine's disk at a given point name
