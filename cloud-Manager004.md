@@ -157,3 +157,47 @@ has alerting policy
 [SRE books refernces](https://landing.google.com/sre/books/)
 
 
+
+### Troubleshooting and Debugging
+
+#### off-premise troubleshoot
+
+incase of failure due to upgrade, Rollback the changes
+
+Mount disks of working and not working
+
+isolate issues and problems 
+
+or call the servce provider
+
+run logs in the cloud server
+
+#### Identiyfing root cause of failure
+
+problems on provider side might be due to geographical regions
+
+migrate to different regions 
+
+resource issues, try running the services on a more powerful VM
+
+do rollbacks for pieces that have recentlt changed
+
+#### Recovering from failure
+
+have backups and well documented recovery plan
+
+keep secondary instances of your running apps
+
+have different cloud providers
+
+#### Debugging problems in the cloud readme
+
+[Troubleshooting instances](https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-instances)
+
+[Virtual Machines Instances in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/)
+
+[Amazon troubleshooting instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-troubleshoot.html)
+
+
+
+
