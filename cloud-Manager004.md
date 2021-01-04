@@ -130,4 +130,30 @@ alert raising:
     pages:->those that need imeadiate attention
     
     non-urgent -> configured to create bugs/tickets for IT specialist
+    
+
+#### Service Level Object
+
+Service-Level Objectives (SLOs):
+
+    Pre-established performace goals for a specific service
+
+Service Level Agreement (SLAs):
+
+    a commitment between a provider and a client
+
+#### Basic  Monitoring in GCP
+
+using stackdriver:
+
+has alerting policy
+
+[datadog monitoring and data collection](https://www.datadoghq.com/blog/monitoring-101-collecting-data/)
+
+[Introduction to metrics monitoring and alerting](https://www.digitalocean.com/community/tutorials/an-introduction-to-metrics-monitoring-and-alerting)
+
+[High availablity](https://en.wikipedia.org/wiki/High_availability)
+
+[SRE books refernces](https://landing.google.com/sre/books/)
+
 
