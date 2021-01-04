@@ -74,3 +74,46 @@ Use beta test to avoid system crash
 [AWS service limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)
 
 [Microsoft Azure service limits](https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits#service-specific-limits)
+
+
+
+### Monitoring and Alerting
+
+Monitoring:
+
+    Looking into the history and current status of a system
+
+Monitoring systems:
+
+    AWS CloudWatch
+    
+    Google Stack Driver
+
+    Azure Metrics
+
+Those that can be used across vendors
+
+    prometheus
+
+    DataDog
+
+    Nagios
+
+Pull model:
+
+    monitoring infrastructure periodically queriesour service to get metric
+
+Push model:
+
+    our services needs to periodically connect to the system to send metrics
+
+whitebox monitoring:
+
+    collecting metrics from insdie a system like how much storage space the system is running and 
+    how long it takes to process a request
+
+    checks behaviour of a system from inside
+
+blackbox monitoring:
+
+    checks the behaviour of our system from outside
