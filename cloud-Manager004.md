@@ -117,3 +117,17 @@ whitebox monitoring:
 blackbox monitoring:
 
     checks the behaviour of our system from outside
+
+
+#### Getting notification alerts:
+
+run job automation and  send status of a system:
+
+    Linux --> cron
+
+alert raising:
+
+    pages:->those that need imeadiate attention
+    
+    non-urgent -> configured to create bugs/tickets for IT specialist
+
