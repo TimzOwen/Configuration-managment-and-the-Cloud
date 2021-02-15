@@ -1,5 +1,5 @@
 
-
+#### To follow other quizes, use your scholarship mail to restudy the course
 
 ## Interview quick recap quizes:
 
